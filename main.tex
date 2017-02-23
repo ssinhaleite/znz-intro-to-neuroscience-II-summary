@@ -1,0 +1,95 @@
+\documentclass[12pt,article,oneside,a4paper]{memoir}
+
+%% Packages
+%% ========
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{wrapfig}
+	
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+%% many common packages
+\input{commonpackages}
+
+%% Some more packages that you may want to use.  Have a look at the
+%% file, and consult the package docs for each.
+\input{extrapackages}
+
+%% Our layout configuration.
+\input{layoutsetup}
+
+%% Theorem environments.  You will have to adapt this for a German
+%% thesis.
+\input{theoremsetup}
+
+%% Helpful macros.
+\input{macrosetup}
+
+%%page layout settings and listing templates etc.
+\input{settings}
+
+\title{\textbf{ZNZ Introduction to Neuroscience II} \\
+       Spring 2017\\\normalsize version 1.0}
+
+\author{
+	Vanessa Leite
+	\vspace{2em}
+	\\Repository page: \url{https://github.com/ssinhaleite/znz-intro-to-neuroscience-II-summary}\\
+	Contact \href{mailto:vrcleite@gmail.com}{vrcleite@gmail.com} if you have any questions.}
+	\thesistype{The Summary of the lectures in 2017}
+	\department{ZNZ - Institute of Neuroinformatics, ETH}
+	\date{\today}
+
+\begin{document}
+\frontmatter
+
+
+%% DO NOT CHANGE.
+\begin{titlingpage}
+  \calccentering{\unitlength}
+  \begin{adjustwidth*}{\unitlength-24pt}{-\unitlength-24pt}
+    \maketitle
+  \end{adjustwidth*}
+\end{titlingpage}
+
+\mainmatter
+
+%% This change is needed if the article option for the memoir document class
+%% is used, in order to count sections (article) as if they were chapters (memoir)
+\counterwithout{section}{chapter}
+
+%% Our content
+
+\newpage
+\clearpage
+\pagenumbering{roman}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{2}
+\tableofcontents
+
+\clearpage
+\pagenumbering{arabic}
+
+\newpage
+
+\section{Cognitive Neuroscience}
+\subsection{Methods}
+\section{Clinical Neuroscience}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\section{References}
+The pictures used in this summary are from the class slide sets or internet, and belong to their respective owners. In the context of the summary they are used for educational purposes only.
+
+\subsection{Cognitive Neuroscience}
+\begin{itemize}
+\item Christian C. Ruff and Scott A. Huettel, Chapter 6 - Experimental Methods in Cognitive Neuroscience, In Neuroeconomics (Second Edition), edited by Paul W. Glimcher and Ernst Fehr, Academic Press, San Diego, 2014, Pages 77-108, ISBN 9780124160088, \url{http://dx.doi.org/10.1016/B978-0-12-416008-8.00006-1}
+\end{itemize}
+
+\end{document}
