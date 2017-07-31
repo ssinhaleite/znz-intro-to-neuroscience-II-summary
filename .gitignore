@@ -7,7 +7,8 @@
 /main.thm
 /main.fdb_latexmk
 /main.fls
-/main.pdf
+/main.bbl
+/main.blg
 /.project
 /.main.synctex.gz
 /main.synctex.gz
