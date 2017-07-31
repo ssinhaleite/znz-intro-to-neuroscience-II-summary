@@ -5,7 +5,7 @@
 \usepackage{graphicx}
 \usepackage{titlesec}
 \usepackage{wrapfig}
-	
+
 \setcounter{secnumdepth}{4}
 
 \titleformat{\paragraph}
@@ -77,27 +77,291 @@
 
 \section{Cognitive Neuroscience}
 %%-----------------------------------------------------------------------------------------%%
-\subsection{Methods}
+\subsection{Research Methods in Cognitive Neuroscience - prof. Christian Ruff - 20.02.2017}
+
+There are various types of methods to acquire cognitive information. Those methods have different temporal resolution (can be acquired in milisseconds, seconds, hours, day, etc) and spatial resolution (can get information of the brain, maps, columns, layers, cels, synapses, molecules). Also, they have a 3rd component that is correlation x interference.
+
+The main techniques that will be considered in this lecture are \textbf{correlative} and \textbf{causal}.
+\subsubsection{Correlative techniques}
+
+Measurements techniques measures changes in brain function while a research participant (human or animal) engages in some cognitive activity. Measuarements techniques are often described as being "correlational" because they can show that signals from a brain region co-occur with a function of interest, but they cannot show that a region is necessary for that function.
+
+\paragraph{(f)MRI} (functional) Magnetic Resonance Imaging
+
+MRI is a non-invasive imagin technique that employs principles of magnetic resonance to visualize different tissue types. Usually, one image is acquired. It is slow (minutes) but accurate (sub-mm spatial resolution).
+
+The fMRI employs special sequences that are i) sensitive to blood oxygenation and ii) fast to acquire (whole brain in ~2-3 seconds). Numerous images are recorded and represent timecourse of blood oxygenation durig experimental task.
+
+How the magnetic resonance works:
+\begin{itemize}
+\item Place an object (brain) in a strong magnetic field
+\subitem protons in the body have spins with a specific orientation and frequency, when the body is inside an MRI scanner, the protons align with the direction of the magnetic field.
+\item Apply radio waves
+\subitem radio frequence pulses with the appropriate frequency (\textbf{Larmor frequency}) change the orientation of the spins as the protons absorb the energy. When the pulse is turned off, the protons return to their original orientations, this process is called "relaxation", and during the (longitudinal $\rightarrow$ T1 and transverse $\rightarrow$ T2 \ref{fig:orientation-relaxation}) relaxation, the protons emit energy in the form of radio waves.
+\item Measure radio waves emitted by object
+\subitem T1 is time constante of how quickly the protons realign with the magnetic field, for instance, CSF has low signal (dark) and fat has high signal (bright).
+\subitem T2 is time constante of how quickly the protons emit energy when recovering to equilibrium, for instance, fat has low signal (dark) and CSF has high sinal (bright).
+\end{itemize}
+
+\begin{figure}
+  \includegraphics[width=0.3\textwidth]{imgs/mri-longitudinal-transverse.png}
+  \caption{Orientation of the relaxation}
+  \label{fig:orientation-relaxation}
+\end{figure}
+
+\textbf{The human scanners have a strong static magnetic field (around 1.5-7 Tesla)}
+
+The \textbf{T1 fMRI} images are structural images with high spatial resolution ( less than 1 mm) and accurately distinguish different types of tissue. The \textbf{T2 fMRI} images have lower spatial resolution (2-3 mm) and relate changes in MR-signal to an experimental manipulation. Timeseries represents a large number of signals that are acquired in temporal order at a specific rate.
+
+Some terminology:
+\begin{itemize}
+\item subjects: the item that will be scanned
+\item sessions: each time that the subject is inside of the scanner
+\item runs: all the images generated in one section for the whole subject. One complete scan of the subject is obtained in one single run.
+\item volume: the 3d images generated from one single run
+\item slices: each section of the volume is called slice.
+\item voxel: each single unit information in a slice
+\end{itemize}
+
+\paragraph{the BOLD (Blood Oxygenation Level Dependent) contrast} measures inhomogeneities in the magnetic fiels (T2) due to changes in the level of O\textsubscript{2} in the blood. This way, fMRI measures neural activity indirectly via BOLD signal.
+
+The oxygenated hemoglobine is diamagnetic (non magnetic) and produce no signal loss, however, the deoxygenated hemoglobine is paramagnetic (magnetic) and then produce a signal loss. When a specific region of the cortex increases its activity in response to a task, the extraction fraction of oxygen from the local capillaries leads to an initial drop in oxygenated hemoglobine (oxyHb) and an increase in local carbon dioxide (CO\textsubscript{2}) and deoxygenated hemoglobine (deoxyHb). 
+
+Some properties of the BOLD signal:
+\begin{itemize}
+\item peaks 4-6 seconds after neural activity (delay)
+\item back to baseline after approx. 30 secs
+\item can vary in precise shape between regions and subjects
+\item often shows undershoot and sometimes shows initial undershoot
+\end{itemize}
+
+Due to an over-compensatory increase of rCBF( regional Cerebral Blood Flow), increased neural activity can decreases the relative amount of deoxyHB. This is called neuro-vascular coupling and it is an active area of research.
+
+At present, the safest assumption is that BOLD relates to both spiking output and excitatory postsynaptic activity in neurons. Inhibitory activity is not assumed to lead to BOLD increases.
+
+BOLD signal is not an absolute measure, but differs from session to session due to differences in scanner sensitivity, subject, etc. This way, BOLD signal needs to be compared between different conditions within the same experiment to infer BOLD changes (increase or decrease) due to neural process of interest P. \textbf{[Task with P] - [control task without P] = P}
+
+For this "subtraction approach", there are assumptions of "pure insertion": i) cognitive (and neural) processes can be added to others without changing them and ii) changed behavior (and brain activity) reflects only added process.
+
+\paragraph{Design of fMRI experiments} they can be block-designs or event-related designs. In the block-designs, we measure constant BOLD response to a \textbf{series of stimuli}. In the event-related designs, we measure BOLD response to \textbf{each stimulus}.
+
+\begin{itemize}
+\item Block-designs:
+\subitem higher statistical sensitivity for detecting effects.
+\subitem some psychological process have to/may be better in blocks, for instance, if there is difficult to switch between states or to reduce surprise effects.
+\item Event-related designs:
+\subitem randomised trial order
+\subitem some events can not be blocked due to stimulus context.
+\end{itemize}
+
+In the fMRI designs, the predictions for BOLD signal can be categorical (identify classes), parametric (stimuli rotating, expanding) or model-based (check correlation between some model and BOLD signals). One can use a factorial desing and combine different factors (categorical, parametric and model-based) within one study, allowing study of context-dependent neural responses (can show a failures of pure insertion).
+
+Sometimes, the resolution of the experiment is smaller than the MR image resolution, for this, we can consider the MVPA (multivariate activity pattern) or repetition suppression instead of the univariate signal in each voxel. The MVPA assumes that the signal in each voxel represents mixture of neuronal populations specialised for different features. Note that the pattern of increases and decreases may hence reliably differentiate different stimuli, even if each voxel by itself does not. The repetition suppression... ?
+
+\paragraph{ Analysis of fMRI experiments: SPM (Statistical Parametric Mapping) } it is a statistical approach instantiated in the most widely used software package for fMRI anaysis, it is implemented in MATLAB and it is open source. Allows standardised detection of \textbf{regional activity changes} in each voxel, associated with task parameters.
+
+\begin{itemize}
+\item Preprocessing
+\subitem Realignment (= registration): fix small head movements, assumes that the shape of the brain does not change.
+\subitem Spatial Normalisation: increase sensitivity with more subjects, extrapolate findings to the whole population and make results from different studies comparable (all in the same 'coordinate system')
+\subitem Smoothing: increase signal to noise, improve inter-subject averaging. In SPM, smoothing is a convolution with a Gaussian kernel. After smoothing, each voxel becomes the result of applying a weighted region of interest.
+\item Model estimation
+\subitem parameters estimation from GLM of voxel timeseries
+\item Contrasts and SPMs
+\subitem statistical inference
+\end{itemize}
+
+
+\subsubsection{Causal Techniques}
+Manipulation techniques examine how perturbations of the brain’s function - either by
+transiently changing neuronal firing rates or neurotransmitter levels or by permanently damaging tissue - change cognitive functions or behavior, and they are called causal approaches.
+
+\paragraph{History of causal techniques: lesion studies } Investigates causal brain-behavior relations (consequence of focal head wounds). They are measure in hypothesis-guided fashion cognitive and behavioral deficits of brain-lesioned patients.
+
+\begin{itemize}
+\item Advantages:
+\subitem truly causal
+\subitem can revel unexpected findings
+\subitem medical relevance
+\item Limitations:
+\subitem lesions often diffuse
+\subitem reorganization?
+\subitem medication/treatments?
+\subitem population inferences?
+\end{itemize}
+
+\paragraph{History of causal techniques: invasive stimulation} Fritsch \& Hitzig in 1870 electrically stimulated an awake dog's brain via inserted wires and caused involuntary movements. The experiments were done in Frisch's home as the University would not allow the experiments. It was the first study to show that externally supplied electricity triggers neural function.
+
+\begin{itemize}
+\item Stimulation pre-surgery to determine tissue function
+\item Systematic "cartography" of brain-behavior (humunsculus)
+\item Only possible in patients $\rightarrow$ invasive!
+\end{itemize}
+
+\paragraph{Causal Methods: Non-invasive stimulation} overcome need for invasive pre-surgical diagnosis, allow systematic testing of excitability and integrity of motor tracts, modulate functio of the cortex for clinical purposes. Examples: TMS (transcranial magnetic stimulation) and tES (transcranial electric stimulation).
+
+\paragraph{TMS: Biophysics} From Faraday's Law: a time-varying magnetic field induces an electric field in a conducting material. The induced electric field results in a measurable voltage and current flow. For TMS, the conducting material is the brain and the induced current activates neurons \ref{fig:tms}.
+
+\begin{figure}
+  \includegraphics[width=\textwidth]{imgs/tms.png}
+  \caption{Basic principle of TMS}
+  \label{fig:tms}
+\end{figure}
+
+Brain is not homogenous conductor, but mixture of different materials (skull, liquor,
+gray and white matter) that have different conductivities. So, how does the electric field affect neurons?
+
+\begin{itemize}
+\item Activation of nerve fibre determined by the spatial derivative of the field component parallel to the fibre (the activating function)
+\item Nerve bends are low-threshold points and therefore easiest to stimulate; the stronger the field, the stronger the stimulation.
+\item Cortical neurons have numerous bends, terminals and branches; these will all be affected most at the location where the induced fiels is maximal.
+\item The likely stimulation point in the cortex for random orientation of bends etc, is the field maximum.
+\end{itemize}
+
+\paragraph{TMS: Neurophysiology and types of stimulation protocols} TMS pulses of hand representation in M1 (motor cortex area 1) cause measurable twitches in hand muscles. Non-motor cortical areas require different behavioral indices.
+
+\begin{itemize}
+\item repetitive TMS protocols apply series of TMS pulses to reduce or increase cortical excitability in the aftermath of stimulation.
+\item The most established and widely used protocol consists of several hundred pulses at 1Hz, which reduces Motor Evoked Potentials (MEP) size for roughly the same duration as the length of rTMS application.
+\item High-frequency rTMS (5-20Hz) has been claimed to enhance MEP size but effects
+vary strongly between and within individuals.
+\item Theta-burst TMS mimicks the theta rhythm that is expressed during memory
+storage.
+\subitem Theta-burst Stimulation (TBS) has been shown to lead to reductions (for continuous TBS) or enhancements (for intermittent TBS) of MEP size lasting more than 30 minutes.
+\item Need to be sure that the brain area is "at rest" during the stimulation (voluntary movements/contraction can reverse/abolishes the effects.
+\end{itemize}
+
+\paragraph{tES: Biophysics} Two poles with electric potential difference (charge) connected through a conductive medium. The connection leads to discharge by electric current: negatively charged ions (anions) flow to anode and positively charged ions (cathions) flow to cathode \ref{fig:tes}. 
+
+\begin{itemize}
+\item About 50\% of the applied current reaches the cortex, the rest is shunted by the skull.
+\end{itemize}
+
+\begin{figure}
+  \includegraphics[width=0.3\textwidth]{imgs/tes.png}
+  \caption{Basic principle of tES}
+  \label{fig:tes}
+\end{figure}
+
+\begin{table}[h]
+  \begin{tabular}{ l |  p{6cm} |  p{6cm} }
+    \hline
+     & TMS & tES \\ \hline
+    current & Induction of current by magnetic field & direct application of current \\ \hline
+    area & relatively focal & not very focal \\ \hline
+    induce & precisely timed burst of action potentials (+ physiological effects) & does not induce time-locked neural activity but modulates natural activity \\ \hline
+	threshold & suprathreshold stimulation & subthreshold stimulation \\ \hline
+    effects & phenomenological & physiological \\
+    \hline
+  \end{tabular}
+  \caption{Differences between TMS and tES}
+\end{table}
+
+%%-----------------------------------------------------------------------------------------%%
 
 \subsection{Perception and Attention - prof. D. Kiper - 27.02.2017}
-\paragraph{Slide \#1:} Perception is not passive, it is a process. Description of elements of perceptual process and factors that influence what individuos perceive.
-\paragraph{Slide \#2:} within them: particular perception (proprioception); meaningful experiences: we are not passive analyzers
-\paragraph{Slide \#3:} When the senses are activated, starts the perceptual selection
-\paragraph{Slide \#4:} enviromental stimulli: sensory depravation tank: if you do not receive stimulus, your brain creates it.
-\paragraph{Slide \#5:} Selective screening: -our system eliminates some factors because they are not important for us to be aware of. -internal and external factors influencing in the perception. - cronic depression: slow/fast twich (?)
-\paragraph{Slide \#6:} internal factors: - state of adaptation - constancies: color constancy: your brain starts to iluminate the enviroment making you think the color is the same in different enviroments.
-\paragraph{Slide \#7:} perceptual organization
 
-\paragraph{Slides \#8-11:} Notes: -one hand: not think perception as a passive process (sensation is the passive process) - perception is noisy and makes mistakes - very complex system.
+\subsubsection{Perception}
+Perception is not a passive process (sensation is the passive process). Perception is the process by which people select, organize, interpret and respond to information from the world around them. It is selection and organization of environmental stimuli to provide meaningful experiences (we are not passive analyzers). The particular perception of itself is called proprioception. If you do not receive any stimulus (for instance, in a depravation tank), your brain creates it.
 
-\paragraph{Slides \#12-14:} Types of attention: 1. overt attention, 2. covert attention: related with spotlight of attention (slide \#15), you can't pay attention to many things. When you pay attention in one thing, your capacity to pay attention in others decay. 3. feature attention: shadowing tasks (slide \#16)
+The perceptual process consists of six stages:\ref{fig:perception-stages}.
+(1-2)People receive stimuli from the enviroment throught their senses.
+(3) When the senses are activated, starts the perceptual selection. The perceptual selection is a filter, that allow us to deal with the most important matter. This is called \textbf{selective screening}: our system eliminates some factors because they are not important for us to be aware of. The "most important" is based on influencing factors that can be external or internal, as listed in Table \ref{table:factors-perception}.
+(4) When the most important stimuli is identified, starts the perceptual organization process by which people group the stimuli in recognizable patterns, listed in Table  \ref{table:perceptual-organization}.
+(5-6) Then, we use the information received to interpret and respond to the stimuli. Perception is noisy and makes mistakes - very complex system. The most common types of perceptual errors are accuracy in judgment (main types listed in Table \ref{table:accuracy-judgment}), perceptual defence, stereotyping, halo effect, projection, role of culture, etc.
 
-\paragraph{Slide \#17:} frontal lobe $\rightarrow$ saccade eyes movements (overt); parieral lobe $\rightarrow$ covert attention
-\paragraph{Slide \#18:} theory about how attention works
-\paragraph{Slide \#19:} one "phrase(?)" in each ear.
-\paragraph{Slides \#20-21:} a lot of simple experiments can be made to evaluate attention, for instance, pop out. It is to "find" elements based on one feature, more features (conjunction) $\rightarrow$ takes longer to find it. $\rightarrow$ pop out experiments can prove sinestesia
-\paragraph{Slides \#21-22:} Desimone experiments. MTA (medial temporal area) $\rightarrow$ prefered direction of motion $\uparrow$. Attention is like a weight to fire particular neurons.
-\paragraph{Slides \#23-?:} a lot of slides were ignored for later reading
+\begin{table}
+  \begin{tabular}{ p{13cm} |  p{2cm} }
+    \hline
+    Internal & External \\ \hline
+    personality -  strong factor & size \\ \hline
+    learning and perceptual sets - expectation of particular interpretation based on past experiences with the same or similar objects & intensity \\ \hline
+    motivation - the needs and desires at any particular time can influence perception (when you are hungry you can perceive a food as more delicious than when you are not hungry) & contrast \\ \hline
+	 & motion \\ \hline
+ 	 & repetition \\ \hline
+ 	 & novelty \\ \hline
+     & familiarity \\
+    \hline
+  \end{tabular}
+  \caption{Externals and internal influencing perception}
+  \label{table:factors-perception}
+\end{table}
+
+\begin{table}
+  \begin{tabular}{ l |  p{12.5cm} }
+    \hline
+    continuity & lines are seen as following the smoothest path \\ \hline
+    closure & tendency to complete an object and perceive it as a constant \\ \hline
+    color constancy & your brain starts to iluminate the enviroment making you think the color is the same in different enviroments \\
+    \hline
+  \end{tabular}
+  \caption{Examples of perceptual organization}
+  \label{table:perceptual-organization}
+\end{table}
+
+\begin{figure}
+  \includegraphics[width=0.5\textwidth]{imgs/perception-stages.png}
+  \caption{Stages of perception}
+  \label{fig:perception-stages}
+\end{figure}
+
+\begin{table}
+  \begin{tabular}{ p{5cm} |  p{10cm} }
+    \hline
+    similarity error & assuming that people are similar to us and then, will behave like us \\ \hline
+    contrast error & comparing people to others rather than to some absolut standard \\ \hline
+    overweighting of negative information & tendency to overreact to something negative \\ \hline
+    race, age, and gender bias & tendency to be more or less positive based on one's race, age or sex \\ \hline
+	first impression error & forming first impressions that are resistant to change \\ 
+    \hline
+  \end{tabular}
+  \caption{Examples of perceptual organization}
+  \label{table:accuracy-judgment}
+\end{table}
+
+\subsubsection{Attention}
+Attention is the taking possession of the mind, in clear and vivid form, of one out of what sem several simultaneous possible objects or trains of thought. It is the focalization, concentration of consciouness. It implies withdraw from some things in order to deal effectively with others.
+
+Attention can change rapidly, switching from one thing to another. It can be steered by our intentions ("top-down"), as when we look for a particular face in a crowd, or it
+can be steered by features of objects in the world ("bottom-up"), as when our attention is grabbed by a police car's flashing lights in our rearview mirror.
+
+\begin{figure}[h]
+  \includegraphics[width=\textwidth]{imgs/attention.png}
+  \caption{A definition of attention by exclusion}
+  \label{fig:attention}
+\end{figure}
+
+There are three main types od attention: overt, covert and feature attention. It one of them are explained in Table \ref{table:types-attention}
+
+\begin{table}
+  \begin{tabular}{ p{5cm} |  p{10cm} }
+    \hline
+    overt attention & selectively attending to an item or location over others by moving the eyes to point in that direction \\ \hline
+    covert attention & related with spotlight of attention, you can't pay attention to many things, this way when you pay attention in one thing, your capacity to pay attention in others decay. \\ \hline
+    feature attention & shadowing tasks, we can distinguish two mixed texts by focusing our attention on cues such as type style \\ 
+    \hline
+  \end{tabular}
+  \caption{Types of attention}
+  \label{table:types-attention}
+\end{table}
+
+Slide \#18: frontal lobe $\rightarrow$ saccade eyes movements (overt attention); parieral lobe $\rightarrow$ covert attention.
+
+\paragraph{Broadbent's filter theory - early selection} Broadbent (1958) argued that information from all of the stimuli presented at any given time enters a sensory buffer.  One of the inputs is then selected on the basis of its physical characteristics for further processing by being allowed to pass through a filter, all the others are lost.  Broadbent assumed that the filter rejected the non-shadowed or unattended message at an early stage of processing. It takes time to shift attention.
+
+\paragraph{Treisman's theory - attenuation} physical characteristics are used to select one information for full processing but other messages are given partial processing. 
+
+\paragraph{Deutsch and Deutsch theory - late selection} All information get through but attention filters only act after meaning is analyzed. 
+%\paragraph{Slide \#19:} one "phrase(?)" in each ear.
+
+Early or late experiments: Treisman and Geffen (1967) set about to test whether the filter was early or late in the processing stream. They had subjects shadow a message on one ear, and tap whenever they heard a certain word in either ear. When the key word appeared in the attended ear, subjects tapped 87\% of the time, but when the key word appeared in the unattended ear, subjects tapped 8\% of the time. This indicates that early selection is occurring.
+
+A lot of simple experiments can be made to evaluate attention, for instance, pop out. It is easy to "find" elements based on one feature, more features (conjunction) $\rightarrow$ takes longer to find it. \textbf{pop out experiments can prove sinestesia because one can use one specific feature such as color, to find elements easily}. The more popout, more later selection (selection after meaning). Popout can be trained!
+
+\paragraph{Effects in early visual cortex} Desimone experiments. MTA (medial temporal area) $\rightarrow$ prefered direction of motion $\uparrow$. Attention is like a weight to fire particular neurons.
+
+\paragraph{Selective and divided attention} Attention is studied by presenting participants with two or more stimuli at the same time, this is called dual-task performance. In selective (focused) attention tasks, people are instructed to respond to one input only. In divided attention tasks, people are asked to process and respond to more than one input.
+
 \paragraph{Gorila video:} innatentional blindness
 
 %%-----------------------------------------------------------------------------------------%%
