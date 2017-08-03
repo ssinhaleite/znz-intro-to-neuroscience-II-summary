@@ -79,12 +79,21 @@
 %%-----------------------------------------------------------------------------------------%%
 \subsection{Research Methods in Cognitive Neuroscience - prof. Christian Ruff - 20.02.2017}
 
-There are various types of methods to acquire cognitive information. Those methods have different temporal resolution (can be acquired in milisseconds, seconds, hours, day, etc) and spatial resolution (can get information of the brain, maps, columns, layers, cels, synapses, molecules). Also, they have a 3rd component that is correlation x interference.
+There are various types of methods to acquire cognitive information. Those methods have different temporal resolution (can be acquired in milisseconds, seconds, hours, day, etc), spatial resolution (can get information of the brain, maps, columns, layers, cels, synapses, molecules) and invasiveness.
 
-The main techniques that will be considered in this lecture are \textbf{correlative} and \textbf{causal}.
+Techniques that record neuronal activity directly through electrophysiological means tend to have very good temporal resolution and techniques that manipulate brain function through drug effects or brain lesions tend to have the poorest temporal resolution.
+
+Techniques that position electrode sensors directly within the brain have the highest spatial resolution and techniques that measure electrical signals that spread diffusely tend to have the lowest spatial resolution.
+
+Non-invasive techniques record endogenous brain signals using sensors outside the body, thus they have almost no risk and can be conducted repeatedly in human volunteer participants. In the other hand, invasive techniques introduce a chemical or recording device into the body. Some invasive techniques can be used in humam volunteers (with significant attention) but other can be used only in human patients and/or non-human animals.
+
+The main techniques that will be considered in this lecture are \textbf{correlative or measurement} and \textbf{causal or manipulation}. Both types of techniques provide distinct and complementary information about brain function.
+
+Usually, the progress of cognitive neuroscience research happens quicly when measurement (correlative) techniques establish likns between brain structure and cognitive function and then manipulation (causal) techniques probe that relationtishp.
+
 \subsubsection{Correlative techniques}
 
-Measurements techniques measures changes in brain function while a research participant (human or animal) engages in some cognitive activity. Measuarements techniques are often described as being "correlational" because they can show that signals from a brain region co-occur with a function of interest, but they cannot show that a region is necessary for that function.
+Measurements techniques measures changes in brain (information transmissionby neurons) function while a research participant (human or animal) engages in some cognitive activity. They are often described as being "correlational" because they can show that signals from a brain region co-occur with a function of interest, but they cannot show that a region is necessary for that function.
 
 \paragraph{(f)MRI} (functional) Magnetic Resonance Imaging
 
@@ -94,10 +103,10 @@ The fMRI employs special sequences that are i) sensitive to blood oxygenation an
 
 How the magnetic resonance works:
 \begin{itemize}
-\item Place an object (brain) in a strong magnetic field
+\item Place an object (brain) in a strong \textbf{magnetic} field
 \subitem protons in the body have spins with a specific orientation and frequency, when the body is inside an MRI scanner, the protons align with the direction of the magnetic field.
-\item Apply radio waves
-\subitem radio frequence pulses with the appropriate frequency (\textbf{Larmor frequency}) change the orientation of the spins as the protons absorb the energy. When the pulse is turned off, the protons return to their original orientations, this process is called "relaxation", and during the (longitudinal $\rightarrow$ T1 and transverse $\rightarrow$ T2 \ref{fig:orientation-relaxation}) relaxation, the protons emit energy in the form of radio waves.
+\item Deliver energy in form of radio waves
+\subitem radio frequence pulses with the appropriate frequency (that depends on the atomic nucleus being imaged, usually\textbf{Larmor frequency}) and change the orientation of the spins as the protons absorb the energy. The frequence used is called \textbf{resonant frequency}. When the pulse is turned off, the protons return to their original orientations, this process is called "relaxation", and during the (longitudinal $\rightarrow$ T1 and transverse $\rightarrow$ T2 \ref{fig:orientation-relaxation}) relaxation, the protons emit energy in the form of radio waves.
 \item Measure radio waves emitted by object
 \subitem T1 is time constante of how quickly the protons realign with the magnetic field, for instance, CSF has low signal (dark) and fat has high signal (bright).
 \subitem T2 is time constante of how quickly the protons emit energy when recovering to equilibrium, for instance, fat has low signal (dark) and CSF has high sinal (bright).
@@ -110,7 +119,7 @@ How the magnetic resonance works:
   \label{fig:orientation-relaxation}
 \end{figure}
 
-\textbf{The human scanners have a strong static magnetic field (around 1.5-7 Tesla)}
+\textbf{The human scanners have a strong static magnetic field (around 1.5-7 Tesla). For reference, the earth's magnetic field is approximately 0.5 Gauss or 50-millionths of a Tesla.}
 
 The \textbf{T1 fMRI} images are structural images with high spatial resolution ( less than 1 mm) and accurately distinguish different types of tissue. The \textbf{T2 fMRI} images have lower spatial resolution (2-3 mm) and relate changes in MR-signal to an experimental manipulation. Timeseries represents a large number of signals that are acquired in temporal order at a specific rate.
 
@@ -146,6 +155,8 @@ For this "subtraction approach", there are assumptions of "pure insertion": i) c
 
 \paragraph{Design of fMRI experiments} they can be block-designs or event-related designs. In the block-designs, we measure constant BOLD response to a \textbf{series of stimuli}. In the event-related designs, we measure BOLD response to \textbf{each stimulus}.
 
+Usually, fMRI experiments present a experimental stimuli displayed via MR-compatible monitor, head mounted display, or projection system, and the participant indicates his responses by moving a joystick or pressing a button.
+
 \begin{itemize}
 \item Block-designs:
 \subitem higher statistical sensitivity for detecting effects.
@@ -172,10 +183,10 @@ Sometimes, the resolution of the experiment is smaller than the MR image resolut
 \subitem statistical inference
 \end{itemize}
 
+\paragraph{Advances in fMRI} contrary to popular conception, advances in MRI technology have not been through stronger scanners, intead, the advances are changes in the hardware and procedures dor collecting fast and high-signal images. Rather than only recording signals from a single sensor around the sample object, new multi-channel scanners record MR signals from a large number of sensors at different points in space.
 
 \subsubsection{Causal Techniques}
-Manipulation techniques examine how perturbations of the brain’s function - either by
-transiently changing neuronal firing rates or neurotransmitter levels or by permanently damaging tissue - change cognitive functions or behavior, and they are called causal approaches.
+Causal or manipulation techniques examine how perturbations of the brain’s function change cognitive functions or behavior. Pertubations on brain can be achieved either by transiently changing neuronal firing rates or neurotransmitter levels or by permanently damaging tissue.
 
 \paragraph{History of causal techniques: lesion studies } Investigates causal brain-behavior relations (consequence of focal head wounds). They are measure in hypothesis-guided fashion cognitive and behavioral deficits of brain-lesioned patients.
 
