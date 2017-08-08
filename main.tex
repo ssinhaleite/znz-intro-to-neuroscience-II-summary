@@ -153,7 +153,9 @@ BOLD signal is not an absolute measure, but differs from session to session due 
 
 For this "subtraction approach", there are assumptions of "pure insertion": i) cognitive (and neural) processes can be added to others without changing them and ii) changed behavior (and brain activity) reflects only added process.
 
-\paragraph{Design of fMRI experiments} they can be block-designs or event-related designs. In the block-designs, we measure constant BOLD response to a \textbf{series of stimuli}. In the event-related designs, we measure BOLD response to \textbf{each stimulus}.
+\paragraph{Design of fMRI experiments} There advantages of fMRI are evident in its widespread acceptance among researchers and its visibility among the general public. fMRI allows us to \textbf{map complex cognitive functions in the brain of human volumteer participants with a good combination of spatial and temporal resolution}. However, fMRI has some disadvantages: it remains expensive, the scanner typicalli costs \$500-\$1000 per hour; also, some participants will be excluded based on issues related to safety (e.g., implanted devices) or comfort (e.g., claustrophobia). Moreover, even very small physiological variation (like head movements of only a few milimeters, breathing, or heartbeats) introduces noise into the BOLD signal.
+
+they can be block-designs or event-related designs. In the block-designs, we measure constant BOLD response to a \textbf{series of stimuli}. In the event-related designs, we measure BOLD response to \textbf{each stimulus}.
 
 Usually, fMRI experiments present a experimental stimuli displayed via MR-compatible monitor, head mounted display, or projection system, and the participant indicates his responses by moving a joystick or pressing a button.
 
@@ -183,36 +185,40 @@ Sometimes, the resolution of the experiment is smaller than the MR image resolut
 \subitem statistical inference
 \end{itemize}
 
-\paragraph{Advances in fMRI} contrary to popular conception, advances in MRI technology have not been through stronger scanners, intead, the advances are changes in the hardware and procedures dor collecting fast and high-signal images. Rather than only recording signals from a single sensor around the sample object, new multi-channel scanners record MR signals from a large number of sensors at different points in space.
+The results from fMRI are presented usually in three diferent ways, as shown in Figure \ref{fig:fMRI-results}. More specifically:
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{imgs/fMRI-results.png}
+  \caption{Common ways to present fMRI results. A) maps of activation, B) time courses of BOLD fMRI signal and C) parameter estimates of fMRI activation.}
+  \label{fig:fMRI-results}
+\end{figure}
+
+\begin{itemize}
+\item Maps of activation
+\subitem the image is not a snapshot of the brain activity or a map of brain function. It simply indicates the results of a particular set of statistical tests, and the threshold for significance is (usually) corrected by the number of tests conducted.
+\item Time course of activation
+\subitem it shows the BOLD contrast MR signal changed over the duration of the experiment. The pattern of changes in BOLD signal over time is called a hemodynamic response.
+\item Parameter estimates
+\subitem This involves creating a hypothesized model for the changes in brain activation that would be observed if there was an effect of the experimental condition. Its main advantage is that it provides a hypothesis-based statistical framework that can be adapted to any experimental design.
+\end{itemize}
+
+\paragraph{Advances in fMRI}
+Contrary to popular conception, advances in MRI technology have not been through stronger scanners, intead, the advances are changes in the hardware and procedures dor collecting fast and high-signal images. Rather than only recording signals from a single sensor around the sample object, new multi-channel scanners record MR signals from a large number of sensors at different points in space.
 
 \subsubsection{Causal Techniques}
-Causal or manipulation techniques examine how perturbations of the brain’s function change cognitive functions or behavior. Pertubations on brain can be achieved either by transiently changing neuronal firing rates or neurotransmitter levels or by permanently damaging tissue.
+In order to address the impact of neural processes on behavior, neuroscients have developed several reserch thechniques to experimentally manipulate neural processing in specific brain areas. Causal or manipulation techniques examine how perturbations of the brain’s function change cognitive functions or behavior. Pertubations on brain can be achieved either by transiently changing neuronal firing rates or neurotransmitter levels (\textbf{brain stimulation techniques}) or by permanently damaging tissue (\textbf{techniques that study the consequences of brain lesions}). Actually, there is a third technique: \textbf{neurophamacological intervetion}.
 
-\paragraph{History of causal techniques: lesion studies } Investigates causal brain-behavior relations (consequence of focal head wounds). They are measure in hypothesis-guided fashion cognitive and behavioral deficits of brain-lesioned patients.
+\paragraph{Brain Stimulation Techniques} Communication between connected neurons depends on the flow of electric charges. Neurons maintain an electric potential of about -70mV and when this potential rises above a fixed threshold voltage-gated ion channels open and trigger action potentials. This variation on membrane potential is usually caused by synaptic input from other neurons, but an external electrical current can also affect membrane voltages and thus generate or inhibit action potentials. Brain Stimulation Techniques produce electrical currents in the brain in a controlled and locally specific fashion.
 
-\begin{itemize}
-\item Advantages:
-\subitem truly causal
-\subitem can revel unexpected findings
-\subitem medical relevance
-\item Limitations:
-\subitem lesions often diffuse
-\subitem reorganization?
-\subitem medication/treatments?
-\subitem population inferences?
-\end{itemize}
+\paragraph{History of causal techniques: invasive stimulation} Fritsch \& Hitzig in 1870 electrically stimulated an awake dog's brain via inserted wires and caused involuntary movements. The experiments were done in Frisch's home as the University would not allow the experiments. It was the first study to show that externally supplied electricity triggers neural function. Penfield and Rasmussen in 1950 attached electrodes to the cortical surface of human patients who were about to undergo neurosurgery and applied electrical current at various parts of the cerebral cortex. The behaviors and sensations elicited by stimulation of each area were documented in one of the first empirical maps of various motor, sensory and cognitive functions in the human cortex \textbf{Systematic "cartography" of brain-behavior (homunculus)}.\\
 
-\paragraph{History of causal techniques: invasive stimulation} Fritsch \& Hitzig in 1870 electrically stimulated an awake dog's brain via inserted wires and caused involuntary movements. The experiments were done in Frisch's home as the University would not allow the experiments. It was the first study to show that externally supplied electricity triggers neural function.
+Nowadays, direct electrical stimulation of neurons via intracranial electrodes remains a routine technique in animal research, but most neuroscients use non-invasive brain stimulation techniques in human research as these techniques do not require surgery and can thus be employed routinely in health participants.
 
-\begin{itemize}
-\item Stimulation pre-surgery to determine tissue function
-\item Systematic "cartography" of brain-behavior (humunsculus)
-\item Only possible in patients $\rightarrow$ invasive!
-\end{itemize}
+\paragraph{Causal Methods: Non-invasive stimulation} overcome need for invasive pre-surgical diagnosis, allow systematic testing of excitability and integrity of motor tracts, modulate function of the cortex for clinical purposes. Examples: TMS (transcranial magnetic stimulation) and tES (transcranial electric stimulation).
 
-\paragraph{Causal Methods: Non-invasive stimulation} overcome need for invasive pre-surgical diagnosis, allow systematic testing of excitability and integrity of motor tracts, modulate functio of the cortex for clinical purposes. Examples: TMS (transcranial magnetic stimulation) and tES (transcranial electric stimulation).
+\paragraph{TMS}
 
-\paragraph{TMS: Biophysics} From Faraday's Law: a time-varying magnetic field induces an electric field in a conducting material. The induced electric field results in a measurable voltage and current flow. For TMS, the conducting material is the brain and the induced current activates neurons \ref{fig:tms}.
+\paragraph{TMS: Biophysics} From Faraday's Law: a time-varying magnetic field induces an electric field in a conducting material. The induced electric field results in a measurable voltage and current flow. For TMS, the conducting material is the brain and the induced current activates neurons, as shown in Figure \ref{fig:tms}.
 
 \begin{figure}
   \centering
@@ -231,24 +237,30 @@ gray and white matter) that have different conductivities. So, how does the elec
 \item The likely stimulation point in the cortex for random orientation of bends etc, is the field maximum.
 \end{itemize}
 
+TMS stimulates neurons by means of electromagnetic induction. By placing a looped copper coil against the part of the scalp overlying the site to be stimulated and running a strong, rapidly changing electrical current through the coil we generate a magnetic pulse perpendicular to the coil that permeates the skull and brain tissue. The rapid change of the magnetic pulse generates a complementary electric field in any conductive material (in this case, the neural tissue). \textbf{In other words, TMS uses a magnetic field, which can pass easily through the skull, to generate an electrical field inside  the skull.} The likelihood that an action potential will be generated at any location depends on the orientation of these neurons with regard to the induced electrial field, this means, \textbf{some locations in the cortex are easier to stimulate than others using this technique}.
+
+The two most common coil shapes are circular and figure-eight-shaped. Circular coils generate powerful but more difuse fields, whereas figure-eight coils result in more focal fields that produce the maximum current at the intersection of the two windings.
+
 \paragraph{TMS: Neurophysiology and types of stimulation protocols} TMS pulses of hand representation in M1 (motor cortex area 1) cause measurable twitches in hand muscles. Non-motor cortical areas require different behavioral indices.
 
+\textbf{Finding the right area} The first step of any TMS experiment involves localizing the scalp area overlying the cortical area that is to be stimulated. The experimenter needs to estimate where on the scalp the TMS coil needs to be placed in order to induce currents in the target area. The stimulation area can also be identified as the site at which TMS has maximal behavioral effects in a separated task performed before the actual experiment begins.
+
+\textbf{Finding the optimal TMS intensity} The optimal TMS intensity is usually determined for each participant individually as a fixed percentage of the motor threshold (MT), that is, the minimum intensity at which TMS applied over the motor cortex elicits hand twiches.
+
+\textbf{Influencing brain activity} There are at least two different ways to influence brain activity. 
 \begin{itemize}
-\item repetitive TMS protocols apply series of TMS pulses to reduce or increase cortical excitability in the aftermath of stimulation.
-\item The most established and widely used protocol consists of several hundred pulses at 1Hz, which reduces Motor Evoked Potentials (MEP) size for roughly the same duration as the length of rTMS application.
-\item High-frequency rTMS (5-20Hz) has been claimed to enhance MEP size but effects
-vary strongly between and within individuals.
-\item Theta-burst TMS mimicks the theta rhythm that is expressed during memory
-storage.
-\subitem Theta-burst Stimulation (TBS) has been shown to lead to reductions (for continuous TBS) or enhancements (for intermittent TBS) of MEP size lasting more than 30 minutes.
-\item Need to be sure that the brain area is "at rest" during the stimulation (voluntary movements/contraction can reverse/abolishes the effects.
+\item repeated TMS (rTMS) pulses can be applied \textit{online} during task performance at a temportal frequency (5-20 Hz).
+\subitem The rTMS pulses elicit unspecific neural activity in the targeted area that disrupts cortical computations at that location.
+\item rTMS can also be applied just prior to the task (\textit{offline}). The offline TMS generates after-effects offering a window in which the normal functional contribution of the stimulated area and possibly interconected areas are markedly reduced.
+\subitem rTMS can be applied for several minutes at low temporal frequency (1 Hz) $\rightarrow$ can reduce Motor Evoked Potentials for roughly the same duration as the length of rTMS application
+\subitem rTMS can be applied for less than a minute in a \textit{theta burst pattern}, tipically 3-5 pulses at 100 Hz repeated at 5Hz. Theta-burst TMS (TBS) mimicks the theta rhythm that is expressed during memory storage. Also, TBS has been shown to lead to reductions (for continuous TBS) or enhancements (for intermittent TBS) of Motor Evoked Potential size lasting more than 30 minutes.
 \end{itemize}
 
-\paragraph{tES: Biophysics} Two poles with electric potential difference (charge) connected through a conductive medium. The connection leads to discharge by electric current: negatively charged ions (anions) flow to anode and positively charged ions (cathions) flow to cathode \ref{fig:tes}. 
+\paragraph{From slides notes:} It is necessary to be sure that the brain area is "at rest" during the stimulation (voluntary movements/contraction can reverse/abolishes the effects.
 
-\begin{itemize}
-\item About 50\% of the applied current reaches the cortex, the rest is shunted by the skull.
-\end{itemize}
+\paragraph{Advantages and Limitations of TMS} TMS allows non-invasive manipulation of neural processing with high spatial resolution (about one centimeter) and exceptional temporal resolution (milliseconds). However, nowadays it is only possible to target brain areas on the cortical surface. Also, for offline studies, there is some uncertainty about the precise duration of time window of TMS after-effects during which behavioral tests can be conducted.
+
+\paragraph{tES: Biophysics} Two poles with electric potential difference (charge) connected through a conductive medium. The connection leads to discharge by electric current: negatively charged ions (anions) flow to anode and positively charged ions (cathions) flow to cathode, as shown in Figure \ref{fig:tes}. 
 
 \begin{figure}
   \centering
@@ -256,6 +268,11 @@ storage.
   \caption{Basic principle of tES}
   \label{fig:tes}
 \end{figure}
+
+tES envolves attaching two electrodes to the scalp and applying a constant electric potential difference, thus running a weak but constant electrical current between them. This affects the neurons along the path of the current, slightly changing their membrane voltages and thus their spontaneous firing. These effects are strongest directly beneath the electrodes where the current density is highest.
+
+\textbf{About 50\% of the applied current reaches the cortex, the rest is shunted by the skull.}
+
 
 \begin{table}[h]
   \begin{tabular}{ l |  p{6cm} |  p{6cm} }
@@ -270,6 +287,29 @@ storage.
   \end{tabular}
   \caption{Differences between TMS and tES}
 \end{table}
+
+\paragraph{History of causal techniques: lesion studies } Investigates causal brain-behavior relations (consequence of focal head wounds). They are measure in hypothesis-guided fashion cognitive and behavioral deficits of brain-lesioned patients.
+
+Brain lesions in animals can also be experimentally induced in the laboratory, which enables scientists to test anatomically specific hypotheses about the relevance of the brain areas for specific behaviors.
+
+\paragraph{Lesion studies in humans} The studiy of behavioral deficits in patients with brain damage (refered to as \textbf{neuropsychology}) originated in the neurological clinic.
+
+One of the greatest challenges in neurological research is thus to determine the exact scope and extent of the neural damage associated with the given condition.
+
+To test a hypothesis about the functional role of a given brain area using the lesion approach, researchers first identify a group of patients with more or less selective damage to that brain area. It is necessary, also, to identify a suitable control group for behavioral comparison (the control participants need to be closely matched to the patients with respecto to behaviorally relevant factors such as age, intelligence, socioeconomic status, cultural background, etc.
+
+\paragraph{Advantages} The brain-behavior relationship is truly causal. Behavior deficits due to brain lesion can be very profound and can be evident to untrained observers. Moreover, the behavioral deficits resulting from naturally occurring brain damage can be very unexpected, leading to entirely new hypothesis. The knowledge gained from lesion studies is always relevant for medical care as it specifies behavioral deficits in patientes with specific types of brain damage, which may help the diagnosis and treatment of these disorders.
+
+\paragraph{Limitations} Brain damage is often spatially diffuse, this can make it very difficult to find patients with overlapping damage in the structures of interest. Often litle is known about patients' behavior prior to the accident or illness. Brain injuries and ilnesses and their treatment can have nonspecific sequelae that may affect behavior, such as brain reorganization, medication effects, or an altered life situation.
+
+\paragraph{Lesion studies in animals} In animals lesions are generated in clearly defined brain regions by various means so that therapeutic measures and the time course of recovery can be studied. A surgery is performed to produce a lesion at the designated site, usually the damage is irreversible.
+
+Lesion experiments in animasl usually involve an experimental and a control group of animals that undergo matched procedures to rule out any unspecific effects of training, surgery, etc. The control group also undergoes surgery, but the procedures do not involve harm to the brain. At the end of testing, the extent of the lesion is documented by detailed \textit{post morten} neuroanatomical and neurochemical examination of the brain tissue.
+
+\paragraph{Advantages} Full control over many variables that vary randomly in the context of pathological brain lesion in humans. Animals can be randomly assigned to either lesion or control group and can be perfectly matched in terms of experience, life situation, etc.
+
+\paragraph{Limitations} Difficult to conduct: the training and keeping of experimental animals can be very labor-intensive and costly and surgery and behavioral testing require considerable infrastructure. It is generally difficult to compare behavior across species.
+
 
 %%-----------------------------------------------------------------------------------------%%
 
