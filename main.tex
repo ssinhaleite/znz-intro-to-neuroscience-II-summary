@@ -2918,25 +2918,52 @@ models are acquired}
 %%---------------------------------------------------------------------------%%
 \subsubsection{Methods}
 \begin{enumerate}
-\item \paragraph{fMRI is routinely used to study the neural processes underlying behavior. Please describe all the procedures necessary for conducting and correctly interpreting an fMRI study, covering the following areas:} \label{question:fMRI-complete}
+\item \paragraph{fMRI is routinely used to study the neural processes 
+underlying behavior. Please describe all the procedures necessary for
+conducting and correctly interpreting an fMRI study, covering the following
+areas:}\label{question:fMRI-complete}
 
-fMRI (functional Magnetic Resonance Imaging) is a non invasive technique that employs principles of magnetic resonance that are sensitive to blood oxygenation and are fast to acquire.
+fMRI (functional Magnetic Resonance Imaging) is a non invasive technique that
+employs principles of magnetic resonance that are sensitive to blood
+oxygenation and are fast to acquire.
 
 \subparagraph{Data acquisition (what signals are measured in fMRI, and how?)}
 
-To acquire data it is necessary follow three steps: 
+To acquire data it is necessary follow three steps:
 \begin{enumerate}
-\item Place an object (brain) in a strong magnetic field: protons in the body have spins with a specific orientation and frequency. When the body is inside an MRI scanner, the protons align with the direction of the magnetic field.
-\item Apply radio waves: radio frequences pulses with the appropriate frequence (Larmor frequency) change the orientation of the spins as the protons absorb the energy. When the pulse is turned off, the protons return to their original orientations (this process is called relaxation), and during relaxation the protons emit energy in the form of radio waves.
-\item Measure radio waves emitted by the object (brain):  two measures can be acquired - T1 longitudinal and T2 transverse. T1 is how quicly the protons realign with the magnetic field and accurately distinguish different types of tissue, T2 is how quicly the protons emit energy when recovering equilibrium and relate changes in MR-signal to an experimental manipulation.
+\item Place an object (brain) in a strong magnetic field: protons in the body
+have spins with a specific orientation and frequency. When the body is inside
+an MRI scanner, the protons align with the direction of the magnetic field.
+\item Apply radio waves: radio frequences pulses with the appropriate frequence
+(Larmor frequency) change the orientation of the spins as the protons absorb
+the energy. When the pulse is turned off, the protons return to their original
+orientations (this process is called relaxation), and during relaxation the
+protons emit energy in the form of radio waves.
+\item Measure radio waves emitted by the object (brain):  two measures can be
+acquired - T1 longitudinal and T2 transverse. T1 is how quicly the protons
+realign with the magnetic field and accurately distinguish different types of
+tissue, T2 is how quicly the protons emit energy when recovering equilibrium
+and relate changes in MR-signal to an experimental manipulation.
 \end{enumerate}
 
-One of the most commons signal used to relate changes in the MR-signal to the experimental manipulation is the BOLD (Blood Oxygenation Level Dependent) signal. This signal measures inhomogeneities in the magnetic field (T2) due to changes in the level of O\textsubscript{2} in the blood. This way, fMRI measures neural activity indirectly. The oxygenated blood is non magnetic while the deoxygenated blood is magnetic. When a specific region of the cortex increases its activity in response to a task, this region consumes the oxygen leading to an initial drop in oxygenated hemoglobine and an increase in local carbon dioxide and deoxygenated hemoglobine.
+One of the most commons signal used to relate changes in the MR-signal to the
+experimental manipulation is the BOLD (Blood Oxygenation Level Dependent)
+signal. This signal measures inhomogeneities in the magnetic field (T2) due to
+changes in the level of O\textsubscript{2} in the blood. This way, fMRI
+measures neural activity indirectly. The oxygenated blood is non magnetic
+while the deoxygenated blood is magnetic. When a specific region of the cortex
+increases its activity in response to a task, this region consumes the oxygen
+leading to an initial drop in oxygenated hemoglobine and an increase in local
+carbon dioxide and deoxygenated hemoglobine.
 
-\subparagraph{Data analysis (which sequential routines are necessary to detect signal changes in fMRI images, using software packages such as SPM?)}
-The data analysis using software such as SPM allows standardised detection of activity changes in each voxel, and for this three macro steps are necessary:
+\subparagraph{Data analysis (which sequential routines are necessary to detect
+signal changes in fMRI images, using software packages such as SPM?)}
+The data analysis using software such as SPM allows standardised detection of
+activity changes in each voxel, and for this three macro steps are necessary:
 \begin{enumerate}
-\item Preprocessing: in the preprocessing phase we can realign the images to fix small head movements, normalise the data to increase sensitivity with more subjects, to extrapolate findings to the whole population, to make the results comparable among different studies, also, we can smooth the image to increase signal to noise, impreve inter-subject average.
+\item Preprocessing: in the preprocessing phase we can realign the images to
+fix small head movements, normalise the data to increase sensitivity with more
+subjects, to extrapolate findings to the whole population, to make the results comparable among different studies, also, we can smooth the image to increase signal to noise, impreve inter-subject average.
 \item Model estimation: calculate parameter for instance, from GLM of voxel timeseries.
 \item Contrasts and SPM: do the statistical inference.
 \end{enumerate}
@@ -3034,7 +3061,7 @@ the complete memory is not ``removed''. Extinction builds a competing memory.
 \item \paragraph{How is it implemented in a human / rodent brain? What are some
 empirical findings?}
 
-It is necessary a protein synthesis to keep the memory. If you present after a CS conditioning, the tone with a protein synthesis inhibitor, we observe a disruption in memory and in the paired condition.
+It is necessary a protein synthesis to keep the memory. If you present, after a CS conditioning, the tone with a protein synthesis inhibitor, we observe a disruption in memory and in the paired condition.
 
 \end{enumerate}
 
@@ -3083,22 +3110,94 @@ Experiencing a relapse is discouraging, so ending it as quickly as possible bene
 The blood-brain barrier (BBB) is a cellular and metabolic barrier located at the capillaries in the brain that alters permeability, restricting the passage of some chemical substances and microscopic objects from the bloodstream into the neural tissue, while allowing other substances to pass into the brain. For example, the blood-brain barrier restricts the passage of bacteria, red-blood cells, and certain toxins and water-soluble molecules into the brain while allowing the passage of oxygen, glucose and amino acids. Normally, a person’s nervous system would be inaccessible for the white blood cells due to the blood-brain barrier. However, it has been shown using MRI that, when a person is undergoing an MS ``attack'', the BBB has broken down in a section of the brain or spinal cord, allowing white blood cells called T lymphocytes to cross over and destroy the myelin. 
 
 \item \paragraph{What is a BBB test in MS?}
+CSF shows oligoclonal bands and elevated IgG synthesis in over 80\% of patients.
+Evoked potentials that may show problems with sensory systems that are not
+known from clinical exam. However, none of these (except serial MRIs) can show
+whether lesions are separated in space and time.
 
 \item \paragraph{In which points are treatments satisfactory?  In which points not so?}
 
 \item \paragraph{What is the prevalence / incidence in Switzerland?}
+The prevalence is 110 per 100.000 inhabitants. The average incidence in Europe
+is 108 per 100.000 inhabitants.
 
 \item \paragraph{What is the prevalence rate in Switzerland and how are such figures determined?}
+The prevalence is 110 per 100.000 inhabitants. The average incidence in Europe
+is 108 per 100.000 inhabitants. The prevalence rate is defined as the number of people that have the disease at a specific point in time.
 
 \item \paragraph{Describe mechanisms of demyelination and axonal damage and mechanisms of remyelination and axonal repair?}
+The early stages of MS involve relapsing-remitting where patient experience
+demyelination associated with loss of function (i.e., vision and gait), which
+is usually regained following remyelination. In the progressive stages of MS,
+irreversible functional deficit occurs which has been associated with
+progressive loss of axons and neurons.
+Demyelination in multiple sclerosis occurs by two major mechanisms: primary
+injury to the myelin sheath with relative preservation of oligodendrocytes, or
+direct injury to oligodendrocytes (oligodendrogliopathy). Following
+demyelination of the axon there is either (i) remyelination with axonal
+preservation, or (ii) axonal death. Remyelination can take place by either
+surviving mature oligodendrocytes, or more likely by the recruitment of
+progenitor oligodendrocytes that mature into myelinating cells. Axonal death
+occurs as a result of either the inflammatory response, in particular MHC Class
+I restricted CD8 positive T cells, or by the failure of local neurotrophic
+support as a result of injury to glial cells.
+The majority of white matter tract axons were entirely enwrapped by myelin;
+therefore, it is likely that axons cannot obtain proper nutrient support from
+their external environment on their own and require metabolic support from
+glial cells. Following demyelination, there is an overall increased demand for
+ATP. The energy required to maintain the intra-axonal ionic balance and the
+resting membrane potential by the Na+/K+ ATPase pump were increased, due to
+redistribution and an overall increase in the number of Na+ channels.
+Increased metabolism requirements for demyelinated axons may make these axons
+more susceptible to death through disease mechanisms such as inflammation.
 
 \item \paragraph{Where are the predilection sites in MS lesion (where are the plaques most frequently)? Reasons?}
+Plaques are randomly distributed. They have a predilection for the 
+periventricular white matter, optic nerves, and spinal cord but spare no part
+of the CNS. The predilection for these sites may be explained in part by the
+distribution of venules where blood–brain barrier breakdown takes place.
 
-\item \paragraph{What cellular or histological features are typical for MS plaques?}
+\item \paragraph{What cellular or histological features are typical for MS
+plaques?}
 
-\item \paragraph{What is the role of the BBB in MS pathogenesis and by which techniques can it be elucidated?}
+Long-lasting chronic MS lesions are characterized by a relatively uniform
+appearance of extensive primary demyelination with variable axonal loss,
+gliosis and minor infiltration by lymphocytes and macrophages/microglia. Early
+MS lesions show a profound inflammatory reaction consisting of T cells, a
+variable but low number of B cells and massive infiltration by foamy
+macrophages at the sites of demyelination.
+
+
+\item \paragraph{What is the role of the BBB in MS pathogenesis and by which
+techniques can it be elucidated?}
+
+The presence of a blood–brain barrier (BBB) restricts the movement of soluble
+mediators and leukocytes from the periphery to the CNS. Despite the presence of
+this tightly regulated BBB, leukocyte entry into the CNS is an early event in
+multiple sclerosis (MS), an inflammatory disorder characterized by the
+formation of multifocal lesions in the brain and spinal cord. Acute MS lesions,
+featuring areas of demyelination, axonal loss and immune cell infiltrates,
+display BBB disruption. The BBB breakdown is a crucial and obligatory step in 
+the paathogenesis of MS.
 
 \item \paragraph{Which forms of MS do you know and how are they characterized?}
+There are four types of MS:
+\begin{itemize}
+\item Relapsing-Remitting MS (RRMS): this is the most common form of multiple
+sclerosis. About 85\% of people with MS are initially diagnosed with RRMS.
+People with RRMS have temporary periods called relapses when new symptoms
+appear.
+\item Secondary-Progressive MS (SPMS): in SPMS, symptoms worsen more steadily
+over time, with or without the occurrence of relapses and remissions. Most
+people who are diagnosed with RRMS will transition to SPMS at some point.
+\item Primary-Progressive MS (PPMS): this type of MS is not very common,
+occurring in about 10\% of people with MS. PPMS is characterized by slowly
+worsening symptoms from the beginning, with no relapses or remissions.
+\item Progressive-Relapsing MS (PRMS): a rare form of MS (5\%), PRMS is
+characterized by a steadily worsening disease state from the beginning, with
+acute relapses but no remissions, with or without recovery.
+\end{itemize}
+
 \end{enumerate}
 
 %%---------------------------------------------------------------------------%%
